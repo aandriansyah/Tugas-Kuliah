@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/orange"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_close"
+                android:layout_alignParentEnd="true"
+                android:id="@+id/btnBack"/>
+
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/btnBack"
+                android:layout_width="match_parent"
+                android:layout_above="@id/llBtn"
+                android:layout_height="match_parent">
+                <EditText
+                    android:id="@+id/etNoteTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:hint="Judul"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/grey"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:layout_below="@id/etNoteTitle"
+                    android:id="@+id/etCategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:layout_marginTop="10dp"
+                    android:hint="Kategori"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/grey"
+                    android:textSize="20sp"/>
+
+                <EditText
+                    android:id="@+id/etNoteBody"
+                    android:layout_below="@id/etCategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:color/transparent"
+                    android:gravity="start|top"
+                    android:hint="Catatan"
+                    android:inputType="textMultiLine"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/grey"
+                    android:textSize="18sp" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/llBtn"
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnSave"
+                    android:background="@drawable/bg_button"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="5dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:text="Simpan"/>
+            </LinearLayout>
+        </RelativeLayout>
+</LinearLayout>
